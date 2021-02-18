@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent }   from './app.component';
 import { ProductService } from './productservice';
-
+import {DropdownModule} from 'primeng/dropdown';
 import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
 
@@ -15,6 +15,7 @@ import {ButtonModule} from 'primeng/button';
     BrowserModule,
     BrowserAnimationsModule,
     TableModule,
+    DropdownModule,
     ButtonModule,
     HttpClientModule,
     FormsModule
