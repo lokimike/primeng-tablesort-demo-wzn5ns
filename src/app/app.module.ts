@@ -1,14 +1,14 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { AppComponent }   from './app.component';
-import { ProductService } from './productservice';
-import {DropdownModule} from 'primeng/dropdown';
-import {TableModule} from 'primeng/table';
-import {ButtonModule} from 'primeng/button';
+import { AppComponent } from "./app.component";
+import { ProductService } from "./productservice";
+import { DropdownModule } from "primeng/dropdown";
+import { TableModule } from "primeng/table";
+import { ButtonModule } from "primeng/button";
 
 @NgModule({
   imports: [
@@ -20,9 +20,8 @@ import {ButtonModule} from 'primeng/button';
     HttpClientModule,
     FormsModule
   ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
   providers: [ProductService]
 })
-
-export class AppModule { }
+export class AppModule {}
