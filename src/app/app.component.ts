@@ -40,7 +40,8 @@ export class AppComponent {
   }
 
   OnDropChange(option) {
-    if (option == "location") {
+    console.log(option);
+    if (option.code == "location") {
       this.http
         .get<any>("assets/products-small.json")
         .toPromise()
