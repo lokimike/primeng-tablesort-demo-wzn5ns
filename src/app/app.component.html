@@ -1,45 +1,56 @@
 <div class="card">
-  <p-dropdown [options]="cities" optionLabel="name"></p-dropdown>
-  <p-table [value]="products1">
-    <ng-template pTemplate="header">
-      <tr>
-        <th pSortableColumn="location">
-          Location <p-sortIcon field="location"></p-sortIcon>
-        </th>
-        <th pSortableColumn="pra">
-          Potential Revenue Annualized <p-sortIcon field="pra"></p-sortIcon>
-        </th>
-        <th pSortableColumn="cpva">
-          Competitor Processing Volume Annualized
-          <p-sortIcon field="cpva"></p-sortIcon>
-        </th>
-        <th pSortableColumn="cma">
-          Competitor Merchant Annualized <p-sortIcon field="cma"></p-sortIcon>
-        </th>
-        <th pSortableColumn="raa">
-          Revenue/Account Annualized <p-sortIcon field="raa"></p-sortIcon>
-        </th>
-        <th pSortableColumn="msr">
-          Market Share By Revenue <p-sortIcon field="msr"></p-sortIcon>
-        </th>
-        <th pSortableColumn="cdda">
-          Commercial DDA's <p-sortIcon field="cdda"></p-sortIcon>
-        </th>
-        <th pSortableColumn="action">
-          Action <p-sortIcon field="action"></p-sortIcon>
-        </th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-product>
-      <tr>
-        <td>{{product.location}}</td>
-        <td>{{product.pra}}</td>
-        <td>{{product.cpva}}</td>
-        <td>{{product.cma}}</td>
-        <td>{{product.raa | currency: 'USD'}}</td>
-        <td>{{product.msr}}</td>
-        <td>{{product.cdda | currency: 'USD'}}</td>
-      </tr>
-    </ng-template>
-  </p-table>
+	<p-dropdown [options]="branchType" [(ngModel)]="selectedType" optionLabel="name"></p-dropdown>
+	<p-table [value]="products1">
+		<ng-template pTemplate="header">
+			<tr>
+				<th pSortableColumn="location">
+					Location <p-sortIcon field="location"></p-sortIcon>
+				</th>
+				<th pSortableColumn="pra">
+					Potential Revenue Annualized <p-sortIcon field="pra"></p-sortIcon>
+				</th>
+				<th pSortableColumn="cpva">
+					Competitor Processing Volume Annualized
+					<p-sortIcon field="cpva"></p-sortIcon>
+				</th>
+				<th pSortableColumn="cma">
+					Competitor Merchant Annualized <p-sortIcon field="cma"></p-sortIcon>
+				</th>
+				<th pSortableColumn="raa">
+					Revenue/Account Annualized <p-sortIcon field="raa"></p-sortIcon>
+				</th>
+				<th pSortableColumn="msr">
+					Market Share By Revenue <p-sortIcon field="msr"></p-sortIcon>
+				</th>
+				<th pSortableColumn="cdda">
+					Commercial DDA's <p-sortIcon field="cdda"></p-sortIcon>
+				</th>
+				<th pSortableColumn="action">
+					Action <p-sortIcon field="action"></p-sortIcon>
+				</th>
+			</tr>
+			<tr>
+				<th>Branch Name</th>
+				<th>Name</th>
+				<th>Category</th>
+				<th>Quantity</th>
+				<th>Name</th>
+				<th>Category</th>
+				<th>Quantity</th>
+				<th></th>
+			</tr>
+		</ng-template>
+		<ng-template pTemplate="body" let-product>
+			<tr>
+				<td>{{product.location}}</td>
+				<td>{{product.pra}}</td>
+				<td>{{product.cpva}}</td>
+				<td>{{product.cma}}</td>
+				<td>{{product.raa | currency: 'USD'}}</td>
+				<td>{{product.msr}}</td>
+				<td>{{product.cdda | currency: 'USD'}}</td>
+				<td></td>
+			</tr>
+		</ng-template>
+	</p-table>
 </div>
