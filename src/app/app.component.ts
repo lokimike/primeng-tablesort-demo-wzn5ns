@@ -40,7 +40,7 @@ export class AppComponent {
   }
 
   delete(product) {
-    console.log(product);
+    console.log(product.index);
     this.products1.splice(product.index, 1);
   }
 
@@ -66,8 +66,8 @@ export class AppComponent {
   }
 
   getBranch(product) {
-    console.log(product.index);
-    if (product.index == 0) {
+    console.log(product);
+    if (product.location == "colorado") {
       this.http
         .get<any>("assets/products-small.json")
         .toPromise()
