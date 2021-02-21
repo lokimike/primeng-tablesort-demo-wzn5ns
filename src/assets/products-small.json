@@ -10,7 +10,8 @@
 			"raa": "3060",
 			"msr": "33.33",
 			"cdda": "1148",
-      "city": "Colorado"		
+      "city": "Colorado",
+      "type": "branch"		
 		},
 		{
 			"location": "Branch 2",
@@ -22,7 +23,8 @@
 			"raa": "3201",
 			"msr": "33.33",
 			"cdda": "1028",
-      "city": "Florida"		
+      "city": "Florida",
+      "type": "branch"	
 		},
 		{
 			"location": "Branch 3",
@@ -34,7 +36,8 @@
 			"raa": "3242",
 			"msr": "33.33",
 			"cdda": "1008",
-      "city": "Mississippi"			
+      "city": "Mississippi",
+      "type": "branch"		
 		}
 	],
   "location": [
@@ -47,7 +50,8 @@
 			"cma": "195",
 			"raa": "3203",
 			"msr": "33.33",
-			"cdda": "220"			
+			"cdda": "220"	,
+      "type": "city"	
 		},
 		{
 			"location": "Florida",
@@ -58,7 +62,8 @@
 			"cma": "195",
 			"raa": "3203",
 			"msr": "33.33",
-			"cdda": "220"			
+			"cdda": "220"	,
+      "type": "city"		
 		},
 		{
 			"location": "Mississippi",
@@ -69,7 +74,8 @@
 			"cma": "198",
 			"raa": "3114",
 			"msr": "33.33",
-			"cdda": "792"			
+			"cdda": "792",
+      "type": "city"			
 		}
 	]
 }

@@ -87,6 +87,7 @@ export class AppComponent {
             }
           });
           this.products1 = prodArr;
+          this.totalRowValue(this.products1);
         });
     }
   }
