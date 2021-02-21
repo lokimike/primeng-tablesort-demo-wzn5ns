@@ -12,6 +12,16 @@ import { Injectable } from "@angular/core";
 export class AppComponent {
   products1;
 
+  totalData = {
+    totalPra: 0,
+    totalPrapercent: 0,
+    totalCpva: 0,
+    totalCpvapercent: 0,
+    totalcma: 0,
+    totalRaa: 0,
+    totalMsr: 0,
+    totalCdda: 0
+  };
   products2: Product[];
 
   products3: Product[];
@@ -53,6 +63,7 @@ export class AppComponent {
         .then(res => <any>res.location)
         .then(data => {
           this.products1 = data;
+          this.totalRowValue(data);
         });
     } else {
       this.http
@@ -83,5 +94,20 @@ export class AppComponent {
           this.products1 = prodArr;
         });
     }
+  }
+
+  totalRowValue(datas) {
+    datas.forEach(data => {
+      this.totalData.totalPra += +data.pra;
+      this.totalData.totalPrapercent += +data.prapercent;
+      this.totalData.totalCpva += +data.cpva;
+      this.totalData.totalCpvapercent += +data.cpvapercent;
+      this.totalData.totalcma += +data.cma;
+      this.totalData.totalRaa += +data.raa;
+      this.totalData.totalMsr += +data.msr;
+      this.totalData.totalCdda += +data.cdda;
+      console.log(+data.pra);
+    });
+    console.log(this.totalData);
   }
 }

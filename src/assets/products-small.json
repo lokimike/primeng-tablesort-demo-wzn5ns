@@ -2,9 +2,9 @@
 	"branch": [
 		{
 			"location": "Branch 1",
-			"pra": "878,269",
+			"pra": "878269",
       "prapercent": "34.96",
-			"cpva": "73,189,083",
+			"cpva": "73189083",
       "cpvapercent": "33.33",
 			"cma": "287",
 			"raa": "3060",
@@ -14,9 +14,9 @@
 		},
 		{
 			"location": "Branch 2",
-			"pra": "822,775",
+			"pra": "822775",
       "prapercent": "33.33",
-			"cpva": "68,564,583",
+			"cpva": "68564583",
       "cpvapercent": "33.33",
 			"cma": "257",
 			"raa": "3201",
@@ -40,9 +40,9 @@
   "location": [
 		{		
     	"location": "Colorado",
-			"pra": "624,596",
+			"pra": "624596",
       "prapercent": "33.48",
-			"cpva": "52,049,666",
+			"cpva": "52049666",
       "cpvapercent": "33.33",
 			"cma": "195",
 			"raa": "3203",
@@ -51,9 +51,9 @@
 		},
 		{
 			"location": "Florida",
-			"pra": "600,628",
+			"pra": "600628",
       "prapercent": "32.19",
-			"cpva": "52,049,666",
+			"cpva": "52049666",
       "cpvapercent": "33.33",
 			"cma": "195",
 			"raa": "3203",
@@ -62,9 +62,9 @@
 		},
 		{
 			"location": "Mississippi",
-			"pra": "640,596",
+			"pra": "640596",
       "prapercent": "34.33",
-			"cpva": "51,385,666",
+			"cpva": "51385666",
       "cpvapercent": "33.33",
 			"cma": "198",
 			"raa": "3114",
