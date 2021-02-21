@@ -64,4 +64,16 @@ export class AppComponent {
         });
     }
   }
+
+  getBranch(product) {
+    if (product.index == 0) {
+      this.http
+        .get<any>("assets/products-small.json")
+        .toPromise()
+        .then(res => <any>res.branch)
+        .then(data => {
+          this.products1 = data[0];
+        });
+    }
+  }
 }
