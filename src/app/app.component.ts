@@ -39,6 +39,11 @@ export class AppComponent {
       });
   }
 
+  delete(product) {
+    console.log(product);
+    this.products1.splice(product.index, 1);
+  }
+
   OnDropChange(option) {
     console.log(option);
     if (option.code == "location") {
