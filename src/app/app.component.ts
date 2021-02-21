@@ -112,6 +112,11 @@ export class AppComponent {
       this.totalData.totalRaa += +data.raa;
       this.totalData.totalMsr += +data.msr;
       this.totalData.totalCdda += +data.cdda;
+      if (data.type == "branch") {
+        this.totalData.totallocation = "Branch Name";
+      } else {
+        this.totalData.totallocation = "US";
+      }
       console.log(+data.cpva);
     });
     this.cd.detectChanges();

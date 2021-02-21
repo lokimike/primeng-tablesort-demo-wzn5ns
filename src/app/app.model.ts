@@ -1,4 +1,5 @@
 export class TotalSum {
+  totallocation: string = "";
   totalPra: number = 0;
   totalPrapercent: number = 0;
   totalCpva: number = 0;
