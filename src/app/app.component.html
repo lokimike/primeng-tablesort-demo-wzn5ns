@@ -30,7 +30,7 @@
 					Action <p-sortIcon field="action"></p-sortIcon>
 				</th>
 			</tr>
-			<tr>
+			<tr *ngIf="!getBranch(product)">
 				<th>Name</th>
 				<th>{{totalData.totalPra | convertCurrency:'1.0-2'}}({{totalData.totalPrapercent/100 | percent}})</th>
 				<th>{{totalData.totalCpva | convertCurrency:'1.0-2'}}({{totalData.totalCpvapercent/100 | percent}})</th>
