@@ -9,6 +9,8 @@ import { ProductService } from "./productservice";
 import { DropdownModule } from "primeng/dropdown";
 import { TableModule } from "primeng/table";
 import { ButtonModule } from "primeng/button";
+import { DecimalPipe } from "@angular/common";
+import { ConvertCurrencyPipe } from "./convert-currency.pipe";
 
 @NgModule({
   imports: [
@@ -20,8 +22,8 @@ import { ButtonModule } from "primeng/button";
     HttpClientModule,
     FormsModule
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, ConvertCurrencyPipe],
   bootstrap: [AppComponent],
-  providers: [ProductService]
+  providers: [ProductService, DecimalPipe]
 })
 export class AppModule {}
