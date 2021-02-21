@@ -1,6 +1,15 @@
 <div class="card">
-	<p-dropdown [options]="branchType" [(ngModel)]="selectedType" optionLabel="name"
-		(onChange)="OnDropChange(selectedType)"></p-dropdown>
+
+	<div class="row" style="margin-bottom:10px">
+		<div class="col-md-2">
+ <h4 style="color:green" >Primary View</h4>
+		</div>
+		<div class="col-md-2">
+			<p-dropdown [options]="branchType" [(ngModel)]="selectedType" optionLabel="name"
+				(onChange)="OnDropChange(selectedType)"></p-dropdown>
+		</div>
+	</div>
+
 	<p-table [value]="products1">
 		<ng-template pTemplate="header">
 			<tr>
