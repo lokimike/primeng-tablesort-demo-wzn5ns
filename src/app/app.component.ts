@@ -4,6 +4,7 @@ import { Product } from "./product";
 import { SortEvent } from "primeng/api";
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { TotalSum } from "./app.model";
 
 @Component({
   selector: "app-root",
@@ -12,16 +13,7 @@ import { Injectable } from "@angular/core";
 export class AppComponent {
   products1;
 
-  totalData = {
-    totalPra: 0,
-    totalPrapercent: 0,
-    totalCpva: 0,
-    totalCpvapercent: 0,
-    totalcma: 0,
-    totalRaa: 0,
-    totalMsr: 0,
-    totalCdda: 0
-  };
+  totalData = new TotalSum();
   products2: Product[];
 
   products3: Product[];
@@ -46,6 +38,7 @@ export class AppComponent {
       .then(res => <any>res.branch)
       .then(data => {
         this.products1 = data;
+        this.totalRowValue(data);
       });
   }
 
@@ -62,8 +55,8 @@ export class AppComponent {
         .toPromise()
         .then(res => <any>res.location)
         .then(data => {
-          this.products1 = data;
           this.totalRowValue(data);
+          this.products1 = data;
         });
     } else {
       this.http
@@ -71,6 +64,7 @@ export class AppComponent {
         .toPromise()
         .then(res => <any>res.branch)
         .then(data => {
+          this.totalRowValue(data);
           this.products1 = data;
         });
     }
@@ -97,6 +91,7 @@ export class AppComponent {
   }
 
   totalRowValue(datas) {
+    this.totalData = new TotalSum();
     datas.forEach(data => {
       this.totalData.totalPra += +data.pra;
       this.totalData.totalPrapercent += +data.prapercent;
@@ -106,8 +101,9 @@ export class AppComponent {
       this.totalData.totalRaa += +data.raa;
       this.totalData.totalMsr += +data.msr;
       this.totalData.totalCdda += +data.cdda;
-      console.log(+data.pra);
+      console.log(+data.cpva);
     });
+    this.cd.detectChanges();
     console.log(this.totalData);
   }
 }
