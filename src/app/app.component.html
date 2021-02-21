@@ -43,7 +43,7 @@
 		</ng-template>
 		<ng-template pTemplate="body" let-product>
 			<tr>
-				<td (click)="getBranch(procuct)">{{product.location}}</td>
+				<td (click)="getBranch(product)">{{product.location}}</td>
 				<td>${{product.pra }}({{product.prapercent}}%)</td>
 				<td>${{product.cpva}}({{product.cpvapercent}}%)</td>
 				<td>{{product.cma}}</td>

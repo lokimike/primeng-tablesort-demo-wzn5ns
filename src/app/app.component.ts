@@ -66,6 +66,7 @@ export class AppComponent {
   }
 
   getBranch(product) {
+    console.log(product.index);
     if (product.index == 0) {
       this.http
         .get<any>("assets/products-small.json")
