@@ -45,6 +45,7 @@ export class AppComponent {
   delete(product) {
     console.log(product.index);
     this.products1.splice(product.index, 1);
+    this.totalRowValue(this.products1);
   }
 
   OnDropChange(option) {
