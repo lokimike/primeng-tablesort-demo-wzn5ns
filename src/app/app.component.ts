@@ -67,13 +67,20 @@ export class AppComponent {
 
   getBranch(product) {
     console.log(product);
-    if (product.location == "colorado") {
+    let prodArr = [];
+    if (product.location) {
       this.http
         .get<any>("assets/products-small.json")
         .toPromise()
         .then(res => <any>res.branch)
         .then(data => {
-          this.products1 = data[0];
+          this.products1 = data;
+          this.products1.forEach(prod => {
+            if (prod.city === product.location) {
+              prodArr.push(prod);
+            }
+          });
+          this.products1 = prodArr;
         });
     }
   }

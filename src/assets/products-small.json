@@ -9,7 +9,8 @@
 			"cma": "287",
 			"raa": "3060",
 			"msr": "33.33",
-			"cdda": "1148"			
+			"cdda": "1148",
+      "city": "Colorado"		
 		},
 		{
 			"location": "Branch 2",
@@ -20,7 +21,8 @@
 			"cma": "257",
 			"raa": "3201",
 			"msr": "33.33",
-			"cdda": "1028"			
+			"cdda": "1028",
+      "city": "Florida"		
 		},
 		{
 			"location": "Branch 3",
@@ -31,12 +33,13 @@
 			"cma": "252",
 			"raa": "3242",
 			"msr": "33.33",
-			"cdda": "1008"			
+			"cdda": "1008",
+      "city": "Mississippi"			
 		}
 	],
   "location": [
 		{		
-    	"location": "colorado",
+    	"location": "Colorado",
 			"pra": "624,596",
       "prapercent": "33.48",
 			"cpva": "52,049,666",
