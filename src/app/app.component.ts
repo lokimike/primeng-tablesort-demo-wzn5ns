@@ -74,7 +74,7 @@ export class AppComponent {
   getBranch(product) {
     console.log(product);
     let prodArr = [];
-    if (product.location) {
+    if (product.type === "city") {
       this.http
         .get<any>("assets/products-small.json")
         .toPromise()
@@ -88,6 +88,15 @@ export class AppComponent {
           });
           this.products1 = prodArr;
           this.totalRowValue(this.products1);
+        });
+    } else {
+      this.http
+        .get<any>("assets/products-small.json")
+        .toPromise()
+        .then(res => <any>res.branch)
+        .then(data => {
+          this.totalRowValue(data);
+          this.products1 = data;
         });
     }
   }
