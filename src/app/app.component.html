@@ -33,11 +33,11 @@
 			<tr>
 				<th>Name</th>
 				<th>{{totalData.totalPra | convertCurrency:'1.0-2'}}</th>
-				<th>{{totalData.totalCpva}}</th>
-				<th>{{totalData.totalcma}}</th>
-				<th>{{totalData.totalRaa}}</th>
-				<th>{{totalData.totalMsr}}</th>
-				<th>{{totalData.totalCdda}}</th>
+				<th>{{totalData.totalCpva | convertCurrency:'1.0-2'}}</th>
+				<th>{{totalData.totalcma | convertCurrency:'1.0-2'}}</th>
+				<th>{{totalData.totalRaa | convertCurrency:'1.0-2'}}</th>
+				<th>{{totalData.totalMsr/100 | percent}}</th>
+				<th>{{totalData.totalCdda }}</th>
 				<th></th>
 			</tr>
 		</ng-template>
