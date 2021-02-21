@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, ngOnInit } from "@angular/core";
+import { Component, ChangeDetectorRef, OnInit } from "@angular/core";
 import { ProductService } from "./productservice";
 import { Product } from "./product";
 import { SortEvent } from "primeng/api";
